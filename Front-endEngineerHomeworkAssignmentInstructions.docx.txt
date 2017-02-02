@@ -9,7 +9,9 @@ Problem:
 	The example in the mockup shows that for a total of 18 cents, one 10 cent coin, 
 	one 5 cent coin, and three 1 cent coins are being used.
 Design:
-	This page should use only html and css for visual elements. Html/css frameworks are ok. The attached wireframe represents a mobile design; however, it should be responsive, and the desktop version should have the contents centered both vertically and horizontally.
+	This page should use only html and css for visual elements. Html/css frameworks are ok. 
+	The attached wireframe represents a mobile design; however, it should be responsive, and 
+	the desktop version should have the contents centered both vertically and horizontally.
 Functionality:
 	1. Each of the coin circles should allow their values to be edited.
 	2. The calculate function should be written in plain javascript.
