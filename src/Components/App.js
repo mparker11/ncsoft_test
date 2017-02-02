@@ -38,6 +38,11 @@ class App extends Component {
         });
     }
     calculateCoins() {
+        if (this.state.totalValue === '') {
+            alert('Please enter a number in the text box');
+            return;
+        }
+        
         let totalValue = this.state.totalValue;
         let remainingValue = this.state.totalValue;
         let sortedCoins = this.state.coins.sort(function(a, b) { return a.value < b.value });
@@ -64,20 +69,18 @@ class App extends Component {
     render() {
         return (
             <div className="app">
-                <div className="header">
-                    <h1>Coin Counter</h1>
-                </div>
                 <div className="content">
+                    <h1>Coin Counter</h1>
                     <div className="coins">
                     {
                         this.state.coins.map(function(coin, i) {
                             return (
-                                <Coin key={ i } name={ 'coin-' + i } value={ coin.value } onChange={ this.handleChange } />
+                                <Coin key={ i } name={ 'coin-' + i } value={ coin.value } counter={ coin.times } onChange={ this.handleChange } />
                             )
                         }, this)
                     }
                     </div>
-                    <div>
+                    <div className="submit-section">
                         <input type="number" name="total-value" placeholder="Type a number" onBlur={ this.handleChange } />
                         <button name="calculate" onClick={ this.handleChange }>CALCULATE</button>
                     </div>

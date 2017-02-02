@@ -5,6 +5,97 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 input[type="number"] {
     -moz-appearance: textfield;
 }
+.app {
+	max-width: 1024px;
+	margin: auto;
+}
 h1 {
 	text-align: center;
+}
+.content {
+	width: 100%;
+}
+.coins {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 20px;
+}
+.coin {
+	width: 200px;
+	height: 200px;
+	border-radius: 50%;
+	background-color: #eee;
+	text-align: center;
+	display: table;
+	position: relative;
+	margin-bottom: 20px;
+}
+.coin-input {
+	display: table-cell;
+	vertical-align: middle;
+}
+.coin-input input {
+	text-align: center;
+	font-weight: 700;
+	background-color: transparent;
+	border: none;
+	box-shadow: none;
+	font-size: 1.75rem;
+	width: 100px;
+}
+.submit-section {
+	text-align: center;
+}
+.submit-section input {
+	display: block;
+    margin: auto;
+	font-size: 1.375rem;
+	width: 250px;
+}
+button[name="calculate"] {
+	width: 254px;
+	background: #3a3a3a;
+	color: #fefefe;
+	border: none;
+	cursor: pointer;
+	padding: 10px 0;
+	font-size: 1.125rem;
+	margin-top: 20px;
+}
+.counter {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-color: #3a3a3a;
+	text-align: center;
+	display: table;
+	opacity: 0;
+}
+.counter span {
+	display: table-cell;
+	vertical-align: middle;
+	color: #fefefe;
+}
+.counter.show {
+	opacity: 1;
+}
+@media screen and (min-width: 1024px) {
+	.app {
+		display: table;
+		height: 100vh;
+	}
+	.content {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	.coin {
+		margin-left: 20px;
+	}
+	.coin:first-child {
+		margin-left: 0;
+	}
 }
